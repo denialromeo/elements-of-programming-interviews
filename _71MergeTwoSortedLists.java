@@ -1,4 +1,4 @@
-public class MergeTwoSortedLists71 {
+public class _71MergeTwoSortedLists {
     public static ListNode<Integer> mergeTwoSortedLists(ListNode<Integer>sortedList1, ListNode<Integer>sortedList2) {
         ListNode<Integer> dummyHead = new ListNode<>(0);
         ListNode<Integer> current = dummyHead;

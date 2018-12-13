@@ -6,6 +6,16 @@ public class ListNode<T> {
         this.data = data;
     }
 
+    public ListNode(T data, ListNode<T> next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public ListNode(ListNode<T> node) {
+        this.data = node.data;
+        this.next = null;
+    }
+
     public ListNode(T[] data) {
         this.data = data[0];
         ListNode<T> currentNode = this;
@@ -20,12 +30,13 @@ public class ListNode<T> {
         this.next = newNode;
     }
 
-    public void appendToEnd(ListNode<T> newNode) {
+    public ListNode<T> appendToEnd(ListNode<T> newNode) {
         ListNode<T> currentNode = this;
         while (currentNode.next != null) {
             currentNode = currentNode.next;
         }
         currentNode.next = newNode;
+        return this;
     }
 
     public void deleteNextNode() {
