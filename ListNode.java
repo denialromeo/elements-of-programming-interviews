@@ -25,11 +25,6 @@ public class ListNode<T> {
         }
     }
 
-    public void append(ListNode<T> newNode) {
-        newNode.next = this.next;
-        this.next = newNode;
-    }
-
     public ListNode<T> appendToEnd(ListNode<T> newNode) {
         ListNode<T> currentNode = this;
         while (currentNode.next != null) {
@@ -39,24 +34,17 @@ public class ListNode<T> {
         return this;
     }
 
-    public void deleteNextNode() {
-        this.next = this.next.next;
-    }
-
-    public ListNode<T> search(T key) {
-        for (ListNode<T> l = this; l != null; l = l.next) {
-            if (l.data == key) {
-                return l;
-            }
-        }
-        return null;
-    }
-
     public void print() {
-        ListNode<T> dummy = this;
-        while(dummy != null) {
-            System.out.println(dummy.data);
-            dummy = dummy.next;
+        ListNode<T> iter = this;
+        String output = "[";
+        while(iter != null) {
+            output += iter.data;
+            if (iter.next != null) {
+                output += (", ");
+            }
+            iter = iter.next;
         }
+        output += "]";
+        System.out.println(output);
     }
 }
