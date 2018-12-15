@@ -1,5 +1,5 @@
 public class _073TestListForCycle {
-    public static boolean testForCycle(ListNode<Integer> list) {
+    public static boolean listHasCycle(ListNode<Integer> list) {
         ListNode<Integer> head = list;
         list = list.next;
         for (int i = 1; list != null; i++, list=list.next) {
@@ -16,7 +16,11 @@ public class _073TestListForCycle {
 
     public static void main(String[] args) {
         ListNode<Integer> list = new ListNode<>(new Integer[]{1,2});
-        list.next.next = list;
-        System.out.println(testForCycle(list));
+        if (listHasCycle(list)) {
+            System.out.println("The list has a cycle in it!");
+        }
+        else {
+            System.out.println(list + " has no cycle.");
+        }
     }
 }

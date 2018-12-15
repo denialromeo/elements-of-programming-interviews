@@ -14,6 +14,6 @@ public class _078RemoveDuplicatesFromSortedList {
 
     public static void main(String[] args) {
         ListNode<Integer> sortedList = new ListNode<>(new Integer[]{1,1,1,2,2,2,3,3,3,4,5,6,7,7,8});
-        removeDuplicatesFromSortedList(sortedList).print();
+        System.out.println(sortedList + " -> " + removeDuplicatesFromSortedList(sortedList));
     }
 }

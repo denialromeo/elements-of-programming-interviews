@@ -28,6 +28,6 @@ public class _072ReverseSublist {
 
     public static void main(String args[]) {
         ListNode<Integer> list = new ListNode<>(new Integer[]{1,2,3,4,5});
-        reverseSublist(list, 0, 2).print();
+        System.out.println(list + " -> " + reverseSublist(list, 0, 2));
     }
 }

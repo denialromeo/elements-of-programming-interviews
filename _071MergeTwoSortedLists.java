@@ -25,6 +25,6 @@ public class _071MergeTwoSortedLists {
     public static void main(String[] args) {
         ListNode<Integer> sortedList1 = new ListNode<>(new Integer[]{1,2,5,11});
         ListNode<Integer> sortedList2 = new ListNode<>(new Integer[]{3,6,12});
-        mergeTwoSortedLists(sortedList1, sortedList2).print();
+        System.out.println(sortedList1 + " + " + sortedList2 + " = " + mergeTwoSortedLists(sortedList1, sortedList2));
     }
 }

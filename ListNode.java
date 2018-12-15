@@ -34,17 +34,17 @@ public class ListNode<T> {
         return this;
     }
 
-    public void print() {
+    public String toString() {
         ListNode<T> iter = this;
-        String output = "[";
+        String asString = "[";
         while(iter != null) {
-            output += iter.data;
+            asString += iter.data;
             if (iter.next != null) {
-                output += (", ");
+                asString += (", ");
             }
             iter = iter.next;
         }
-        output += "]";
-        System.out.println(output);
+        asString += "]";
+        return asString;
     }
 }
