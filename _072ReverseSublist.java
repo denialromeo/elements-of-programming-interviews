@@ -1,4 +1,4 @@
-public class _72ReverseSublist {
+public class _072ReverseSublist {
     public static ListNode<Integer> reverseList(ListNode<Integer> list) {
         ListNode<Integer> dummyHead = new ListNode<>(0, list);
         ListNode<Integer> newEnd = list;
