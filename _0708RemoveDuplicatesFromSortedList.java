@@ -1,4 +1,4 @@
-public class _078RemoveDuplicatesFromSortedList {
+public class _0708RemoveDuplicatesFromSortedList {
     public static ListNode<Integer> removeDuplicatesFromSortedList(ListNode<Integer> sortedList) {
         ListNode<Integer> uniques = sortedList;
         ListNode<Integer> uniquesHead = uniques;

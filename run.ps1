@@ -2,3 +2,4 @@ $file = get-childitem -filter "*$($args[0])*.java" | select-object -exp Name -fi
 $class = ([system.io.fileinfo]$file).basename
 javac $file
 java $class
+remove-item *.class

@@ -1,4 +1,4 @@
-public class _073TestListForCycle {
+public class _0703TestListForCycle {
     public static boolean listHasCycle(ListNode<Integer> list) {
         ListNode<Integer> head = list;
         list = list.next;
