@@ -2,8 +2,14 @@ public class ListNode<T> {
     public T data;
     public ListNode<T> next;
 
-    public ListNode(T data) {
-        this.data = data;
+    @SafeVarargs
+    public ListNode(T ... data) {
+        this.data = data[0];
+        ListNode<T> currentNode = this;
+        for (int i = 1; i < data.length; i++) {
+            currentNode.next = new ListNode<T>(data[i]);
+            currentNode = currentNode.next;
+        }
     }
 
     public ListNode(T data, ListNode<T> next) {
@@ -14,15 +20,6 @@ public class ListNode<T> {
     public ListNode(ListNode<T> node) {
         this.data = node.data;
         this.next = null;
-    }
-
-    public ListNode(T[] data) {
-        this.data = data[0];
-        ListNode<T> currentNode = this;
-        for (int i = 1; i < data.length; i++) {
-            currentNode.next = new ListNode<T>(data[i]);
-            currentNode = currentNode.next;
-        }
     }
 
     public ListNode<T> appendToEnd(ListNode<T> newNode) {

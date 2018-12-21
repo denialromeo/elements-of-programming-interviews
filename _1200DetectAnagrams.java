@@ -20,7 +20,7 @@ public class _1200DetectAnagrams {
     }
 
     public static void main(String[] args) {
-        List<String> words = Arrays.asList(new String[]{"debitcard", "elvis", "listen", "silent", "lives", "badcredit"});
+        List<String> words = Arrays.asList("debitcard", "elvis", "listen", "silent", "lives", "badcredit");
         HashMap<Integer, List<String>> anagrams = detectAnagrams(words);
         for (HashMap.Entry<Integer, List<String>> group: anagrams.entrySet()) {
             List<String> entries = group.getValue();

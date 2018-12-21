@@ -15,7 +15,7 @@ public class _0703TestListForCycle {
     }
 
     public static void main(String[] args) {
-        ListNode<Integer> list = new ListNode<>(new Integer[]{1,2});
+        ListNode<Integer> list = new ListNode<>(1, 2);
         if (listHasCycle(list)) {
             System.out.println("The list has a cycle in it!");
         }

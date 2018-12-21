@@ -13,7 +13,7 @@ public class _0708RemoveDuplicatesFromSortedList {
     }
 
     public static void main(String[] args) {
-        ListNode<Integer> sortedList = new ListNode<>(new Integer[]{1,1,1,2,2,2,3,3,3,4,5,6,7,7,8});
+        ListNode<Integer> sortedList = new ListNode<>(1,1,1,2,2,2,3,3,3,4,5,6,7,7,8);
         System.out.println(sortedList + " -> " + removeDuplicatesFromSortedList(sortedList));
     }
 }

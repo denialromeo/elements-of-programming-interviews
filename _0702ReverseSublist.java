@@ -27,7 +27,7 @@ public class _0702ReverseSublist {
     }
 
     public static void main(String args[]) {
-        ListNode<Integer> list = new ListNode<>(new Integer[]{1,2,3,4,5});
+        ListNode<Integer> list = new ListNode<>(1, 2, 3, 4, 5);
         int start = 1, end = 3;
         System.out.println(list + ", " + start + ", " + end + " -> " + reverseSublist(list, start, end));
     }
