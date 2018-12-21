@@ -8,8 +8,8 @@ public class _1200DetectAnagrams {
         HashMap<Integer, List<String>> anagrams = new HashMap<>();
         for (String s: words) {
             int hash = 0;
-            for (int i = 0; i < s.length(); i++) {
-                hash += (int) s.charAt(i);
+            for (Character c: s.toCharArray()) {
+                hash += c.hashCode();
             }
             if (!anagrams.containsKey(hash)) {
                 anagrams.put(hash, new ArrayList<String>());
