@@ -18,15 +18,16 @@ public class BSTNode<T extends Comparable<T>> {
         else if (this.right != null && this.data.compareTo(key) < 0) { this.right.insert(key); }
     }
 
-    public BSTNode<T> search(T key) {
-        if (this.data == key) { return this; }
+    public boolean search(T key) {
+        if (this.data == key) { return true; }
         else if (this.left != null && this.data.compareTo(key) > 0) { return this.left.search(key); }
         else if (this.right != null && this.data.compareTo(key) < 0) { return this.right.search(key); }
-        return null;
+        return false;
     }
 
     public static void main(String[] args) {
         BSTNode<Integer> tree = new BSTNode<>(5, 10, 2, 3);
         System.out.println(tree.left.right.data);
+        System.out.println(tree.search(3));
     }
 }
